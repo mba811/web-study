@@ -37,8 +37,7 @@ EnableDNS本身是一个提供DNS域名解析服务的服务商，[EnableDNS](ht
   * 1、项目首页：https://github.com/ROHOST/enableDNS
 
 2、EnableDNS已经提供了手动安装的方法了，显麻烦的话，可以直接使用EnableDNS的一键安装。执行以下命令：
-    
-    
+
     wget https://github.com/ROHOST/enableDNS/blob/master/autoinstall-edns.sh
     chmod 777 ./autoinstall-edns.sh 
     ./autoinstall-edns.sh

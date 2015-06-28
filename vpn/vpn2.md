@@ -240,19 +240,3 @@ You can also read [LuCI Configuration][14].
 You can find all the documentation in the wiki: [https://github.com/clowwindy/ShadowVPN/wiki][15]
 
    [15]: https://github.com/clowwindy/ShadowVPN/wiki
-
-## License 
-
-MIT 
-
-## Bugs and Issues 
-
-  * [FAQ][16]
-  * [Issue Tracker][17]
-  * [Mailing list][18]
-
-   [16]: https://github.com/clowwindy/ShadowVPN/wiki/FAQ
-   [17]: https://github.com/clowwindy/ShadowVPN/issues?state=open
-   
-   
-   ://groups.google.com/group/shadowsocks

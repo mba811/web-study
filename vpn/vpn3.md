@@ -226,7 +226,3 @@ SoftEther VPN - An Open-Source Cross-platform Multi-protocol VPN Program
     SoftEther VPN is developed by SoftEther VPN Project at University of Tsukuba.
     Department of Computer Science has dozens of overly-enthusiastic geeks.
     Join us: [http://www.tsukuba.ac.jp/english/admission/](http://www.tsukuba.ac.jp/english/admission/)
-    
-
-  
-

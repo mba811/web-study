@@ -10,8 +10,6 @@ Shadowsocks作为一个开源的番羽土啬工具，还是非常不错的。如
 
 配置如下：
     
-
-    
     {
         "timeout": 600,
         "method": "aes-256-cfb",
@@ -35,7 +33,6 @@ Shadowsocks作为一个开源的番羽土啬工具，还是非常不错的。如
 
 port-ip-monitor.sh[link](https://github.com/cedricporter/port-client-ip-monitor)
     
-    
     #!/bin/bash
     #
     # File: port-ip-monitor.sh
@@ -54,8 +51,6 @@ port-ip-monitor.sh[link](https://github.com/cedricporter/port-client-ip-monitor)
 
 port-ip-monitor.sh[link](https://github.com/cedricporter/port-client-ip-monitor)
     
-
-    
     * * * * * (cd /var/log/ && /root/projects/port-client-ip-monitor/port-ip-monitor.sh)
     
 
@@ -64,8 +59,7 @@ port-ip-monitor.sh[link](https://github.com/cedricporter/port-client-ip-monitor)
 如下
 
 port-ip-monitor.sh[link](https://github.com/cedricporter/port-client-ip-monitor)
-      
-    
+
     [2014-11-02 11:04:01]
     40001 119.129.165.181
     40008 119.129.254.224
@@ -78,6 +72,3 @@ port-ip-monitor.sh[link](https://github.com/cedricporter/port-client-ip-monitor)
     40001 119.129.165.181
     40008 119.129.254.224
     40013 219.130.239.3
-    
-
-  

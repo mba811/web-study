@@ -1,7 +1,5 @@
 # 修改Hosts的四种方法
 
- 
-
 ![](http://www.macappbox.com/d/file/tips/2014/a482262d064944c9d6c0992abd98d301.png)
 
 一名刚刚使用 Mac OS X Lion 系统的朋友问我怎么该系统下修改 Hosts 文件，说网上搜了很多办法都不管用，只要编辑 Hosts 文件就出现”你不是文件 hosts 的所有者，因此没有权限写到该文件”的提示，要解决这个权限问题又比较麻烦，对于刚刚使用 Mac 的用户来说并不容易整明白。因此，就有了这篇小贴士，下面我分享四种方法来修改 Mac OS X Lion 系统中的 Hosts 文件，这四种方法都不会出现权限提示，而且 Mac OS X Snow Leopard(10.6) 用户也完全可以使用这些方法。
