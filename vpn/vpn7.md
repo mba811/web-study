@@ -1,0 +1,77 @@
+# 实现 VPN 科学上网 Chnroutes
+
+# chnroutes
+
+利用来自[APNIC](http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest)的数据生成路由命令脚本，让VPN客户端在连接时自动执行。通过这些路由脚本，可以让用户在使用VPN作为默认网关时，不使用VPN访问中国国内IP，从而减轻VPN负担，并提高访问国内网站的速度。
+
+
+![](http://7q5cfr.com1.z0.glb.clouddn.com/chnroutes.png)
+
+## 基本约定
+
+在使用这些脚本之前，请确保你在自己的电脑上已经成功配置好一个VPN（PPTP或OpenVPN），并且让之以默认网关的方式运行（通常是默认配置），即VPN连接之后所有网络流量都通过VPN。
+
+### 注意事项
+
+  * 因为这些IP数据不是固定不变的，建议每隔一个月更新一次；
+  * 使用此法之后，可能导致Google Music等服务无法访问，因为连上VPN之后，使用的DNS也是国外的，因此google.cn解析出的是国外的IP。
+
+## OpenVPN
+
+如安装有`iproute2`软件包，请尽量使用此方式。自带方式在路由表条目较多时执行极慢。
+
+### iproute2
+
+  1. 执行`python chnroutes.py`，这将生成`vpn-up.sh`和`vpn-down.sh`两个文件；
+  2. 将这两个文件移入`/etc/openvpn/`；
+  3. 在OpenVPN配置文件中加入：  
+
+
+```
+script-security 2
+up vpn-up.sh
+down vpn-down.sh
+```
+
+  4. 重新连接VPN，观察日志测试。
+
+### 自带方式
+
+  1. 执行`python chnroutes.py -p old`, 这将生成`routes.txt`文本文件；
+  2. 将该文件内容加在OpenVPN配置文件的尾部；
+  3. 重新连接VPN，观察日志测试。
+
+## PPTP
+
+### Mac OS X
+
+  1. 在终端中执行`python chnroutes.py -p mac`，这将生成`ip-up`和`ip-down`两个文件；
+  2. 将这两个文件移入`/etc/ppp/`；
+  3. 重新连接VPN，观察测试。
+
+### Linux
+
+  1. 执行`python chnroutes.py -p linux`，这将生成`ip-pre-up`和`ip-down`两个文件；
+  2. 将`ip-pre-up`移入`/etc/ppp/`，`ip-down`移入`/etc/ppp/ip-down.d/`；
+  3. 重新连接VPN，观察测试。
+
+### Windows
+
+  1. 在命令提示符中执行`python chnroutes.py -p win`，这将生成`vpnup.bat`和`vpndown.bat`两个文件；
+  2. 在拨号前手动执行`vpnup.bat`文件设置路由表；在断开VPN后，可运行`vpndown.bat`清理路由表。
+
+## Cisco IPSec
+
+### Mac OS X
+
+  1. 在终端中执行`python chnroutes.py -p mac -t ipsec`，这将生成`phase1-up.sh`和`phase1-down.sh`两个文件；
+  2. Mac OS X 系统支持 Cisco IPSec 的后台使用的是 racoon，但是不会像 PPTP 一样自动调用启动脚本，如果需要自动调用脚本，需要自己修改配置文件，并自己从命令行启动；
+  3. 推荐手动执行`phase1-up.sh`设置路由表；而只有在网络环境变化的时候，需要运行`phase1-down.sh`再运行`phase1-up.sh`来重新设置路由表。
+
+## 基于Linux的第三方系统的路由器
+
+一些基于Linux系统的第三方路由器系统如OpenWRT、DD-WRT、Tomato都带有VPN（PPTP/OpenVPN）客户端的，也就是说，我们只需要在路由器进行VPN拨号，并利用本项目提供的路由表脚本就可以把VPN针对性番蔷扩展到整个局域网。当然，使用这个方式也是会带来副作用，即局域网的任何机器都不适合使用Emule或者BT等P2P下载软件。但对于那些不使用P2P，希望在路由器上设置针对性翻墙的用户，这方法十分有用，因为只需要一个VPN帐号，局域网内的所有机器，包括使用Wi-Fi的手机都能自动翻墙。详细配置方式请参考[Autoddvpn](http://code.google.com/p/autoddvpn/)项目。
+
+__github：https://github.com/ranmocy/chnroutes
+
+__传送门: [http://pan.baidu.com/s/1mgxF58W](http://pan.baidu.com/s/1mgxF58W) 密码: 9vri
