@@ -1404,7 +1404,7 @@ tcpdump: listening on pppoe-wan, link-type LINUX_SLL (Linux cooked), capture siz
 
 ## 观测HTTP关键词过滤
 
-未完待续 （请订阅我的博客或者twitter获得持续更新：[http://fqrouter.tumblr.com](http://www.google.com/url?q=http%3A%2F%2Ffqrouter.tumblr.com&sa=D&sntz=1&usg=AFQjCNE6D8cRYwx9gRbKcdzqOJquKghJXw)）
+未完待续 
 
 运行在Android上的翻墙工具 fqrouter 已经在Google Play上架：[https://play.google.com/store/apps/details?id=fq.router2](https://play.google.com/store/apps/details?id=fq.router2)
 
