@@ -22,6 +22,7 @@
    * [Mac OS X 终端设置代理](fq/fq3.md)
    * [如何在外部利用内网的代理中继](fq/fq4.md)
    * [Shadowsocks 配合 GoAgentX 科学上网](fq/fq5.md)
+   * [GoAgent](fq/fq6.md)
 * [应用](yy/README.md)
    * [Yandex空间FTP连接错误解决和Ucoz免费建站空间支持FTP可绑域名](yy/yy1.md)
    * [Pancake.io,Postach.io免费将Dropbox和Evernote变身为静态博客空间](yy/yy2.md)
