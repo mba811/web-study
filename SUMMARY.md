@@ -4,7 +4,7 @@
 * [VPN](vpn/README.md)
    * [如何使用 VPN](vpn/vpn1.md)
    * [shadowvpn](vpn/vpn2.md)
-   * [softether.org](vpn/vpn3.md)
+   * [softether](vpn/vpn3.md)
    * [VPN 在 Mac 上的分步指南 (使用 OpenVPN)](vpn/vpn4.md)
    * [Shadowsocks 的多用户配置](vpn/vpn5.md)
    * [Mac 下利用 Goagentx 设置 Shadowsocks](vpn/vpn6.md)
