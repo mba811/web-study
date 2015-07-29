@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [声明](book/copyright.md)
 * [VPN](vpn/README.md)
    * [如何使用 VPN](vpn/vpn1.md)
    * [shadowvpn](vpn/vpn2.md)
@@ -35,4 +36,3 @@
    * [如何利用网络资源](zy/zy1.md)
 * [共享](gx/README.md)
    * [mac设置无线网络wifi共享](gx/g1.md)
-
